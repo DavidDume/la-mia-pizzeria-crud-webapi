@@ -1,0 +1,28 @@
+﻿
+@model Pizza
+
+<div class="container text-center">
+
+
+
+    <div class="title text-center"">
+        <h1>
+	@Model.Name
+        </h1>
+		<p>
+			<strong>Categoria:</strong>
+				@if (Model.Category != null)
+				{
+					@Model.Category.Name
+				}
+				else
+				{
+					<span>Nessuna categoria</span>
+				}
+		</p>
+        <p>Descrizione: @Model.Description</p>
+		<p>Prezzo: @Model.Price $</p>
+		<img width="50" src="@Model.Image">
+    </div>
+
+</div>
